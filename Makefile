@@ -5,8 +5,7 @@
 CXX ?= g++
 
 # Compiler flags
-CXXFLAGS ?= --std=c++11 -Wall -Werror -pedantic -g -Wno-sign-compare -Wno-comment
-
+CXXFLAGS = --std=c++11 -Wall -Werror -pedantic -g -fsanitize=address -fsanitize=undefined
 # Run a regression test
 test: Matrix_public_test.exe Matrix_tests.exe Image_public_test.exe Image_tests.exe processing_public_tests.exe resize.exe
 	./Matrix_public_test.exe
