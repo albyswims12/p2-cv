@@ -41,7 +41,7 @@ void Matrix_print(const Matrix* mat, std::ostream& os) {
   os << mat->width << " " << mat->height << "\n";
   for (int i = 0; i < mat->height; ++i) {
     for (int j = 0; j < mat->width; ++j) {
-      os << mat->data[(i*mat->height) + j] << " ";
+      os << *Matrix_at(mat, i, j) << " ";
     }
     os << "\n";
   }
